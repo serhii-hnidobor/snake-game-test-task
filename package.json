@@ -19,7 +19,7 @@
     "lint-fix:shared": "yarn workspace shared run lint",
     "lint-fix:all": "yarn run lint-fix:frontned && yarn run lint-fix:backend && yarn run lint-fix:shared",
     "format-code": "yarn run prettier:all && yarn run lint-fix:all",
-    "i": "yarn --yarn install --ignore-optional"
+    "i": "yarn install --ignore-optional"
   },
   "keywords": [],
   "author": "",
