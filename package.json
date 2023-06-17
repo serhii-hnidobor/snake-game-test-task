@@ -1,0 +1,40 @@
+{
+  "name": "snake-game-test-task",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "build:shared": "yarn workspace shared run build",
+    "build:frontend": "yarn workspace frontend run build",
+    "build:backend": "yarn workspace backend run build",
+    "build": "yarn run build:shared && yarn run build:backend && yarn run build:frontend",
+    "dev:frontend": "yarn workspace frontend run dev",
+    "start:backend": "yarn workspace backend run start",
+    "prettier:backend": "yarn workspace backend run-prettier",
+    "prettier:frontend": "yarn workspace frontend run-prettier",
+    "prettier:shared": "yarn workspace shared run-prettier",
+    "prettier:all": "yarn run prettier:backend && yarn run prettier:frontend && yarn run prettier:shared",
+    "lint-fix:frontned": "yarn workspace frontend run lint",
+    "lint-fix:backend": "yarn workspace backend run lint",
+    "lint-fix:shared": "yarn workspace shared run lint",
+    "lint-fix:all": "yarn run lint-fix:frontned && yarn run lint-fix:backend && yarn run lint-fix:shared",
+    "format-code": "yarn run prettier:all && yarn run lint-fix:all",
+    "i": "yarn --yarn install --ignore-optional"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.42.0",
+    "prettier": "^2.8.8",
+    "@typescript-eslint/eslint-plugin": "^5.59.11",
+    "@typescript-eslint/parser": "^5.59.11",
+    "eslint-plugin-import": "2.27.5",
+    "typescript": "^5.1.0"
+  },
+  "workspaces": [
+    "backend",
+    "frontend",
+    "shared"
+  ]
+}
